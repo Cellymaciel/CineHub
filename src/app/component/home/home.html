@@ -1,0 +1,162 @@
+
+<app-header></app-header>
+
+<div class="container">
+
+  <div id="BaseBox">
+    <h1>Explorar</h1>
+    <div id ="search">
+      <img src="../../../assets/images/lupa.png"/>
+      <input type="text" placeholder="Pesquisar filme"  [(ngModel)]="searchQuery" />
+    </div>
+  </div>
+
+
+    <div id="movieList" *ngIf="searchQuery === ''">
+      <div class="movieCard">
+       <img src="../../../assets/images/mauVado.png" id="movie"/>
+        <div class="Point">
+          <p>4,5</p>
+          <p>/ 5</p>
+          <img src="../../../assets/images/star.png"/>
+        </div>
+        <div class="overlay">
+          <p class="title">Meu Malvado Favorito 4</p>
+          <div class="info">
+            <p>Comedia</p>
+            <p>•</p>
+            <p>2024</p>
+          </div>
+        </div>
+       </div>
+
+      <div class="movieCard">
+       <img src="../../../assets/images/porThings.png" id="movie"/>
+        <div class="Point">
+          <p>4,5</p>
+          <p>/ 5</p>
+          <img src="../../../assets/images/star.png"/>
+        </div>
+        <div class="overlay">
+          <p class="title">Pobres Criaturas</p>
+          <div class="info">
+            <p>Drama</p>
+            <p>•</p>
+            <p>2022</p>
+          </div>
+        </div>
+       </div>
+
+      <div class="movieCard">
+       <img src="../../../assets/images/deedPool.png" id="movie"/>
+        <div class="Point">
+          <p>4,5</p>
+          <p>/ 5</p>
+          <img src="../../../assets/images/star.png"/>
+        </div>
+        <div class="overlay">
+          <p class="title">Deadpool & Wolverine</p>
+          <div class="info">
+            <p>Ação</p>
+            <p>•</p>
+            <p>2023</p>
+          </div>
+        </div>
+       </div>
+
+      <div class="movieCard">
+       <img src="../../../assets/images/corvo.png" id="movie"/>
+        <div class="Point">
+          <p>4,5</p>
+          <p>/ 5</p>
+          <img src="../../../assets/images/star.png"/>
+        </div>
+        <div class="overlay">
+          <p class="title">O Corvo/p>
+          <div class="info">
+            <p>Fantasia</p>
+            <p>•</p>
+            <p>2024</p>
+          </div>
+        </div>
+       </div>
+
+      <div class="movieCard">
+       <img src="../../../assets/images/srAneis.png" id="movie"/>
+        <div class="Point">
+          <p>4,5</p>
+          <p>/ 5</p>
+          <img src="../../../assets/images/star.png"/>
+        </div>
+        <div class="overlay">
+          <p class="title">O Senhor dos Anéis: A Sociedade do Anel</p>
+          <div class="info">
+            <p>Aventura</p>
+            <p>•</p>
+            <p>2001</p>
+          </div>
+        </div>
+       </div>
+
+      <div class="movieCard">
+       <img src="../../../assets/images/alien.png" id="movie"/>
+        <div class="Point">
+          <p>4,5</p>
+          <p>/ 5</p>
+          <img src="../../../assets/images/star.png"/>
+        </div>
+        <div class="overlay">
+          <p class="title">Alien: Covenant</p>
+          <div class="info">
+            <p>Terror</p>
+            <p>•</p>
+            <p>2017</p>
+          </div>
+        </div>
+       </div>
+
+
+      <div class="movieCard">
+       <img src="../../../assets/images/divertidamente.png" id="movie"/>
+        <div class="Point">
+          <p>4,5</p>
+          <p>/ 5</p>
+          <img src="../../../assets/images/star.png"/>
+        </div>
+        <div class="overlay">
+          <p class="title">Divertidamente</p>
+          <div class="info">
+            <p>Animação</p>
+            <p>•</p>
+            <p>2024</p>
+          </div>
+        </div>
+       </div>
+
+      <div class="movieCard">
+       <img src="../../../assets/images/maxMax.png" id="movie"/>
+        <div class="Point">
+          <p>4,5</p>
+          <p>/ 5</p>
+          <img src="../../../assets/images/star.png"/>
+        </div>
+        <div class="overlay">
+          <p class="title">Mad Max: Estrada da Fúria/p>
+          <div class="info">
+            <p>Ação</p>
+            <p>•</p>
+            <p>2015</p>
+          </div>
+        </div>
+       </div>
+    </div>
+  <div class="no-results" *ngIf="searchQuery !== ''">
+    <div class="no-results-content">
+      <img src="../../../assets/images/frameMovie.png" alt="No results icon" />
+      <p>Nenhum filme encontrado com "{{ searchQuery }}"</p>
+      <p>Que tal tentar outra busca?</p>
+      <button (click)="clearSearch()">Limpar filtro</button>
+    </div>
+  </div>
+
+</div>
