@@ -129,3 +129,52 @@
   font-family: 'Inter', sans-serif;
 }
 
+@media screen and (max-width: 500px) {
+.container{
+  padding: 10px 25px 10px 25px;
+  margin-bottom: 25px;
+}
+#BaseBox{
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 15px;
+}
+#BaseBox h1{
+  font-size: 24px !important;
+  font-weight: 300 !important;
+  font-family: "Rammetto One", sans-serif !important ;
+  font-style: normal !important;
+  margin-left: 25px;
+}
+#search{
+  width: 175px;
+  border-radius: 5px;
+  border: 1px solid #7A7B9F ;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px 15px 12px 100px;
+
+}
+#search img{
+  width: 12px;
+  height: 12px;
+}
+
+#movieList{
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+gap: 25px;}
+
+.no-results {
+  margin-top: 50px;
+  text-align: center;
+  color: #B5B6C9;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+}
