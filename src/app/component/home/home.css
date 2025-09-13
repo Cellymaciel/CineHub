@@ -129,7 +129,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
 .container{
   padding: 10px 25px 10px 25px;
   margin-bottom: 25px;
@@ -144,7 +144,6 @@
   font-weight: 300 !important;
   font-family: "Rammetto One", sans-serif !important ;
   font-style: normal !important;
-  margin-left: 25px;
 }
 #search{
   width: 175px;
