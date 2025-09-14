@@ -9,16 +9,9 @@ body {
       background: linear-gradient(rgba(19, 19, 32, 0.9), rgba(19, 19, 32, 0.9)),
                 url('../../../assets/images/deedPool.png');
     background-repeat: no-repeat;
-
-    /* Esta é a chave: 'cover' faz a imagem ocupar toda a área */
     background-size: cover;
-
-    /* Remove a altura fixa */
     height: auto;
-
-    /* Garante que o container ocupe a tela inteira */
     min-height: 100vh;
-
     background-position: center;
     position: relative;
     padding: 25px 10px;
@@ -145,7 +138,7 @@ body {
         min-height: 100vh;
         margin: 0;
         padding: 0;
- }
+        padding-bottom: 25px; }
   #box{
     flex-direction: column;
     gap: 5px;
