@@ -1,0 +1,183 @@
+#container{
+    background: linear-gradient(rgba(19, 19, 32, 0.9), rgba(19, 19, 32, 0.9)),
+                url('../../../assets/images/deedPool.png');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  height: 500px;
+  background-position: center;
+  position: relative;
+  padding: 25px 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#box{
+  flex-direction: row;
+  display: flex;
+  gap: 50px;
+}
+
+#cadImage{
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+}
+#cadImage img{
+ width: 300px;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+
+}
+
+#cardInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+  font-family: 'Inter', sans-serif;
+}
+#back{
+ display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+#back img{
+  width: 18px;
+  height: 18px;
+}
+#back p{
+  color:#7A7B9F;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#title{
+  color:#E4E5EC;
+  font-size: 32px;
+  font-weight: 700;
+ font-family: 'Inter', sans-serif;
+ margin-top: 10px;
+
+}
+#info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+.infoR{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.infoBold{
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color:#B5B6C9 ;
+}
+
+.infoNormal{
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color:#B5B6C9 ;
+}
+#roting{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#roting h2{
+  color: #B5B6C9;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin-left: 5px;
+}
+#roting p{
+  color: #7A7B9F;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+#description{
+  width: 550px;
+
+}
+#description p{
+  color: #B5B6C9;
+  font-family: 'Inter', sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  text-wrap: wrap;
+  line-height: 20px;
+}
+
+
+@media  screen and (max-width: 400px) {
+ #container{
+     background: linear-gradient(rgba(19, 19, 32, 0.9), rgba(19, 19, 32, 0.9)),
+                url('../../../assets/images/deedPool.png');
+  background-repeat: no-repeat;
+  background-size:100% 95%;
+  background-position: center;
+  position: relative;
+  padding: 35px 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+ }
+  #box{
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 420px;
+  }
+  #cadImage{
+    width: 300px;
+    height: 450px;
+    margin-top: 150px;
+  }
+  #cadImage img{
+   width: 300px;
+    height: 400px;
+  }
+  #cardInfo{
+    align-items: center;
+    text-align: center;
+    margin-top: 0px;
+  }
+  #title{
+    font-size: 24px;
+  }
+  #description{
+    width: 300px;
+    margin-top: 10px;
+  }
+  #roting h2{
+    font-size: 18px;
+  }
+  #back{
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+
+  }
+  #back img{
+    width: 14px;
+    height: 14px;
+  }
+  #back p{
+    font-size: 14px;
+  }
+}
