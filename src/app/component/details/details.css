@@ -130,7 +130,7 @@
   background-size:100% 95%;
   background-position: center;
   position: relative;
-  padding: 35px 10px;
+  padding: 35px 10px 0 10px;
   align-items: center;
   display: flex;
   justify-content: center;
