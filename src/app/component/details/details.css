@@ -1,15 +1,30 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
 #container{
-    background: linear-gradient(rgba(19, 19, 32, 0.9), rgba(19, 19, 32, 0.9)),
+      background: linear-gradient(rgba(19, 19, 32, 0.9), rgba(19, 19, 32, 0.9)),
                 url('../../../assets/images/deedPool.png');
-  background-repeat: no-repeat;
-  background-size: 80%;
-  height: 500px;
-  background-position: center;
-  position: relative;
-  padding: 25px 10px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+    background-repeat: no-repeat;
+
+    /* Esta é a chave: 'cover' faz a imagem ocupar toda a área */
+    background-size: cover;
+
+    /* Remove a altura fixa */
+    height: auto;
+
+    /* Garante que o container ocupe a tela inteira */
+    min-height: 100vh;
+
+    background-position: center;
+    position: relative;
+    padding: 25px 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 #box{
@@ -124,28 +139,25 @@
 
 @media  screen and (max-width: 500px) {
  #container{
-     background: linear-gradient(rgba(19, 19, 32, 0.9), rgba(19, 19, 32, 0.9)),
-                url('../../../assets/images/deedPool.png');
-  background-repeat: no-repeat;
-  background-size:100% 95%;
-  background-position: center;
-  position: relative;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+        background-size: cover;
+        background-position: center;
+        height: auto;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
  }
   #box{
     flex-direction: column;
-    gap: 25px;
+    gap: 5px;
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 410px;
+    margin-top: 0px;
   }
   #cadImage{
     width: 300px;
     height: 450px;
-    margin-top: 150px;
+    margin-top: 50px;
   }
   #cadImage img{
    width: 300px;
@@ -154,8 +166,7 @@
   #cardInfo{
     align-items: center;
     text-align: center;
-    margin-top: 0px;
-  }
+    margin-top: 0px;}
   #title{
     font-size: 24px;
   }
