@@ -1,11 +1,14 @@
 <app-header></app-header>
 
-<div id="container">
+<div id="container"
+*ngIf="movieDetails"
+[style.--bg-url]="'url(' + 'https://image.tmdb.org/t/p/w1280' + movieDetails.poster_path + ')'"
+>
 
   <div id="box">
 
     <div id="cadImage">
-      <img src="../../../assets/images/deedPool.png"/>
+      <img [src]="'https://image.tmdb.org/t/p/w500' + movieDetails.poster_path"/>
     </div>
 
     <div id="cardInfo">
@@ -15,29 +18,29 @@
         <p>Voltar</p>
       </div>
 
-      <h2 id="title">Deadpool & Wolverine</h2>
+      <h2 id="title">{{ movieDetails.title }}</h2>
 
       <div id="info">
         <div class="infoR">
           <p class="infoBold">Categoria:</p>
-          <p class="infoNormal">Drama</p>
+          <p class="infoNormal">{{ movieDetails.genres[0].name }}</p>
         </div>
         <div class="infoR">
           <p class="infoBold">Ano:</p>
-          <p class="infoNormal">2023</p>
+          <p class="infoNormal">{{ movieDetails.release_date | date: 'yyyy' }}</p>
         </div>
       </div>
 
       <div id="roting">
         <img src="../../../assets/images/stars.png"/>
-        <h2>4</h2>
-        <p>(5 avaliações)</p>
+        <h2>{{ movieDetails.vote_average | number:'1.1-1' }}</h2>
+        <p>({{ movieDetails.vote_count }} avaliações)</p>
       </div>
 
        <div id="description">
-        <p>Do cineasta Yorgos Lanthimos e da produtora Emma Stone, vem o conto incrível e a evolução fantástica de Bella Baxter (Stone), uma jovem mulher trazida de volta à vida pelo brilhante e pouco ortodoxo cientista Dr. Godwin Baxter (Willem Dafoe). Sob a proteção de Baxter, Bella está ansiosa para aprender. Faminta pela mundanidade que lhe falta, Bella foge com Duncan Wedderburn (Mark Ruffalo), um advogado astuto e depravado, em uma aventura relâmpago pelos continentes. Livre dos preconceitos de sua época, Bella se torna firme em seu propósito de defender a igualdade e a libertação.</p>
+        <p>{{ movieDetails.overview }}</p>
       </div>
-      
+
     </div>
   </div>
 </div>

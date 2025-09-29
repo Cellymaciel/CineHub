@@ -13,7 +13,7 @@ export const routes: Routes = [
     component:Header
   },
   {
-    path:'details',
+    path:'details/:id',
     component:Details
   }
 ];

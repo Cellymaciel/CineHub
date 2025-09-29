@@ -13,142 +13,27 @@
 
 
     <div id="movieList" *ngIf="searchQuery === ''">
-      <div class="movieCard" routerLink="/details">
-       <img src="../../../assets/images/mauVado.png" id="movie"/>
+      <div class="movieCard" *ngFor="let movie of popularMovies"[routerLink]="['/details', movie.id]">
+       <img [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path" id="movie"/>
         <div class="Point">
-          <p>4,5</p>
-          <p>/ 5</p>
+          <p>{{ movie.vote_average | number:'1.1-1' }}</p>
+          <p>/ 10</p>
           <img src="../../../assets/images/star.png"/>
         </div>
         <div class="overlay">
-          <p class="title">Meu Malvado Favorito 4</p>
+          <p class="title">{{ movie.title }}</p>
           <div class="info">
-            <p>Comedia</p>
             <p>•</p>
-            <p>2024</p>
-          </div>
-        </div>
-       </div>
-
-      <div class="movieCard"  routerLink="/details">
-       <img src="../../../assets/images/porThings.png" id="movie"/>
-        <div class="Point">
-          <p>4,5</p>
-          <p>/ 5</p>
-          <img src="../../../assets/images/star.png"/>
-        </div>
-        <div class="overlay">
-          <p class="title">Pobres Criaturas</p>
-          <div class="info">
-            <p>Drama</p>
-            <p>•</p>
-            <p>2022</p>
-          </div>
-        </div>
-       </div>
-
-      <div class="movieCard"  routerLink="/details">
-       <img src="../../../assets/images/deedPool.png" id="movie"/>
-        <div class="Point">
-          <p>4,5</p>
-          <p>/ 5</p>
-          <img src="../../../assets/images/star.png"/>
-        </div>
-        <div class="overlay">
-          <p class="title">Deadpool & Wolverine</p>
-          <div class="info">
-            <p>Ação</p>
-            <p>•</p>
-            <p>2023</p>
-          </div>
-        </div>
-       </div>
-
-      <div class="movieCard"  routerLink="/details">
-       <img src="../../../assets/images/corvo.png" id="movie"/>
-        <div class="Point">
-          <p>4,5</p>
-          <p>/ 5</p>
-          <img src="../../../assets/images/star.png"/>
-        </div>
-        <div class="overlay">
-          <p class="title">O Corvo/p>
-          <div class="info">
-            <p>Fantasia</p>
-            <p>•</p>
-            <p>2024</p>
-          </div>
-        </div>
-       </div>
-
-      <div class="movieCard"  routerLink="/details">
-       <img src="../../../assets/images/srAneis.png" id="movie"/>
-        <div class="Point">
-          <p>4,5</p>
-          <p>/ 5</p>
-          <img src="../../../assets/images/star.png"/>
-        </div>
-        <div class="overlay">
-          <p class="title">O Senhor dos Anéis: A Sociedade do Anel</p>
-          <div class="info">
-            <p>Aventura</p>
-            <p>•</p>
-            <p>2001</p>
-          </div>
-        </div>
-       </div>
-
-      <div class="movieCard"  routerLink="/details">
-       <img src="../../../assets/images/alien.png" id="movie"/>
-        <div class="Point">
-          <p>4,5</p>
-          <p>/ 5</p>
-          <img src="../../../assets/images/star.png"/>
-        </div>
-        <div class="overlay">
-          <p class="title">Alien: Covenant</p>
-          <div class="info">
-            <p>Terror</p>
-            <p>•</p>
-            <p>2017</p>
+            <p>{{ movie.release_date | date:'yyyy' }}</p>
           </div>
         </div>
        </div>
 
 
-      <div class="movieCard"  routerLink="/details">
-       <img src="../../../assets/images/divertidamente.png" id="movie"/>
-        <div class="Point">
-          <p>4,5</p>
-          <p>/ 5</p>
-          <img src="../../../assets/images/star.png"/>
-        </div>
-        <div class="overlay">
-          <p class="title">Divertidamente</p>
-          <div class="info">
-            <p>Animação</p>
-            <p>•</p>
-            <p>2024</p>
-          </div>
-        </div>
-       </div>
 
-      <div class="movieCard"  routerLink="/details">
-       <img src="../../../assets/images/maxMax.png" id="movie"/>
-        <div class="Point">
-          <p>4,5</p>
-          <p>/ 5</p>
-          <img src="../../../assets/images/star.png"/>
-        </div>
-        <div class="overlay">
-          <p class="title">Mad Max: Estrada da Fúria/p>
-          <div class="info">
-            <p>Ação</p>
-            <p>•</p>
-            <p>2015</p>
-          </div>
-        </div>
-       </div>
+
+
+
     </div>
   <div class="no-results" *ngIf="searchQuery !== ''">
     <div class="no-results-content">
